@@ -22,7 +22,7 @@ function createLine() {
     const newLine = {
         pos: { x: 150, y: yPos },
         dimen: { width: 0, height: 0 },
-        txt: 'middle line',
+        txt: 'Edit this text in fleld',
         size: 30,
         align: 'center',
         fontColor: 'white',
@@ -111,7 +111,6 @@ function setLineTxt(text) {
 function setLineSize(val) {
     if (gMeme.lines.length < 1) return
     currLine.size += val;
-    console.log(currLine);
 }
 
 function setTextDirec(val) {
