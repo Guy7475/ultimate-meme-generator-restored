@@ -1,7 +1,4 @@
-header {
-    /* margin: 1em; */
-    /* border-radius: 20%; */
-}
+
 
 .title {
     background-image: linear-gradient(to right, rgb(0, 192, 42), rgb(0, 119, 255));
@@ -11,7 +8,7 @@ header {
 
 .secondary-bar {
     background-color: var(--panel);
-    margin-bottom: 2em;
+    margin-bottom: 1em;
     text-align: center;
     /* padding: .25em 0; */
 }

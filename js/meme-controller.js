@@ -77,7 +77,10 @@ function onMenuSelection(val) {
     element.forEach(item=> {
         item.style.display = 'none'
     })
-    document.querySelector(`.${val}`).style.display = 'block'
+    if (val === 'generator-panel') {
+        document.querySelector(`.${val}`).style.display = 'flex'
+    }
+    else document.querySelector(`.${val}`).style.display = 'block'
 }
 
 

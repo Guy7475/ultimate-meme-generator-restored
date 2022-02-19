@@ -1,30 +1,46 @@
 .generator-panel {
     display: none;
+    width: 60vw;
+    min-width: 310px;
+    height: 80vh;
+    margin: 0 20vw;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: var(--panel);
+    background-color: #9c9c9c96;
     padding: 1em;
-    border-radius: 15px;
+    border-radius: 10px;
     position: absolute;
-
-    /* top: 25vh; */
-    left: 20%;
-
 }
 
 .canvas-container {
-    margin: 0;
+    margin: .5em;
 }
 
 canvas {
     margin: 0;
-    border-radius: 5%;
+    border-radius: 2.5%;
+}
+
+.button-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    border: 2px solid white;
+    border-radius: 10px;
 }
 
 .text-editor {
     background-color: var(--bgc);
     padding: .3em;
     border-radius: 10px;
+}
+
+.text-input {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid var(--bgc);
 }
 
 .button-menu {
