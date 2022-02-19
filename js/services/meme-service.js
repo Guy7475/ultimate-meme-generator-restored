@@ -22,7 +22,7 @@ function createLine() {
         size: 25,
         align: 'center',
         fontColor: 'white',
-        StrokeColor: 'black',
+        StrokeColor: 'blue',
         font: 'Impact',
         isDrag: false,
     };
@@ -64,7 +64,6 @@ function drawFocusBox() {
         currLine.dimen.height * 1.5,
     );
     gCtx.fillStyle = 'orange';
-    // gCtx.fillRect( currLine.pos.x, currLine.pos.y, 150, 150);
     gCtx.strokeStyle = 'black';
     gCtx.stroke();
 
@@ -122,6 +121,8 @@ function setFontColor(color) {
 function setStrokeColor(color) {
     if (gMeme.lines.length < 1) return
     currLine.StrokeColor = color;
+    console.log('gCtx.strokeStyle:', gCtx.strokeStyle)
+
 }
 
 function setFont(font) {
