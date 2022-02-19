@@ -16,7 +16,6 @@ function onInit() {
     renderMeme();
 }
 
-
 // listeners:
 function addListeners() {
     listenToText();

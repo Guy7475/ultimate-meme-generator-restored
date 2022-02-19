@@ -1,9 +1,5 @@
 'use strict';
 
-
-// var gCanvWidth;
-// var gCanvheight;
-
 var gMeme = {
     selectedImgId: 2,
     selectedLineIdx: 0,
@@ -22,8 +18,8 @@ function createLine() {
     const newLine = {
         pos: { x: 150, y: yPos },
         dimen: { width: 0, height: 0 },
-        txt: 'Edit this text in fleld',
-        size: 30,
+        txt: 'Edit this text',
+        size: 25,
         align: 'center',
         fontColor: 'white',
         StrokeColor: 'black',

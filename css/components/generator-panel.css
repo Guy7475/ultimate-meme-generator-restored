@@ -36,6 +36,11 @@ canvas {
     margin: auto;
 }
 
+.menu-line {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 .text-editor {
     background-image: linear-gradient(to right,rgb(255, 0, 0), rgb(255, 238, 0));
     padding: .3em;
@@ -51,7 +56,7 @@ canvas {
 
 .font-and-color {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .button-menu {
@@ -69,6 +74,4 @@ button img {
     height: 1em;
 }
 
-.font-color {
-    background-image: url(../../icons/paint-board-and-brush.png);
-}
+
