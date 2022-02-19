@@ -139,4 +139,3 @@ function setCanvsSize(canvSize) {
     // gCanvheight = canvSize.height;
 }
 
-//

@@ -1,16 +1,14 @@
 .generator-panel {
     display: none;
-    width: 60vw;
+    width: 350px;
+    height:600px;
+    margin: auto;
     min-width: 310px;
-    height: 80vh;
-    margin: 0 20vw;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #9c9c9c96;
-    padding: 1em;
+    background-color: #9c9c9cce;
     border-radius: 10px;
-    position: absolute;
 }
 
 .canvas-container {
@@ -19,6 +17,7 @@
 
 canvas {
     margin: 0;
+    border: 2px solid vawhite;
     border-radius: 2.5%;
 }
 
@@ -34,6 +33,7 @@ canvas {
 
 .text-editor {
     background-color: var(--bgc);
+    /* background-image: linear-gradient(to right,rgb(255, 0, 0), rgb(255, 238, 0), rgb(0, 192, 42), rgb(0, 38, 255), rgb(195, 0, 255)); */
     padding: .3em;
     border-radius: 10px;
 }
