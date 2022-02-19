@@ -6,10 +6,10 @@
     padding: 1em;
     border-radius: 15px;
     position: absolute;
-        
+
     /* top: 25vh; */
     left: 20%;
-    
+
 }
 
 .canvas-container {
@@ -22,9 +22,9 @@ canvas {
 }
 
 .text-editor {
- background-color: var(--bgc);
- padding: .3em;
- border-radius: 10px;
+    background-color: var(--bgc);
+    padding: .3em;
+    border-radius: 10px;
 }
 
 .button-menu {
@@ -34,10 +34,10 @@ canvas {
 }
 
 .menu-line {
-    padding: .5em ;
+    padding: .5em;
 }
 
-button img{
+button img {
     width: 1em;
     height: 1em;
 }

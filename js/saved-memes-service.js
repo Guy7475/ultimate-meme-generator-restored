@@ -38,10 +38,10 @@ function renderSavedMemes() {
     let memes = getMemesForDisplay();
     let strHTML = memes.map(meme => {
         return `
-        <img src="${meme}">
+        <img class="saved-gallery-item" src="${meme}">
         `;
     });
-    let elMemeGallery = document.querySelector('.saved-meme-gallery')
+    let elMemeGallery = document.querySelector('.saved-meme-grid')
     elMemeGallery.innerHTML = strHTML.join('')
 }
 

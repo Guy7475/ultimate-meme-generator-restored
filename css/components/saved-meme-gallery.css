@@ -1,3 +1,15 @@
 .saved-meme-gallery {
  display: none;
 }
+
+.saved-meme-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: .5em;
+}
+
+.saved-gallery-item {
+    height: 150px;
+    cursor: pointer;
+    border-radius: 5%;
+}

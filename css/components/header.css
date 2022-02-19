@@ -12,4 +12,18 @@ header {
 .secondary-bar {
     background-color: var(--panel);
     margin-bottom: 2em;
+    text-align: center;
+    /* padding: .25em 0; */
+}
+
+.menu-btn {
+    font-family: balsamiq;
+    color: white;
+    display: inline-block;
+    padding: .25em 1em;
+}
+
+.menu-btn:hover {
+    color: rgb(0, 255, 149);
+    cursor: pointer;
 }
