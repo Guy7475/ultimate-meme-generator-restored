@@ -17,23 +17,28 @@
 
 <body onload="onInit()">
     <header>
-        <h1>Ultimate Meme Genrator</h1>
-
+        <div class="title">
+            <h1>Ultimate Meme Genrator</h1>
+        </div>
+        <div class="secondary-bar">
+            <button class="menu-btn" onclick="onMenuSelection('gallery-container')">Start Over</button>
+            <button class="menu-btn" onclick="onMenuSelection('generator-panel')">Generator</button>
+            <button class="menu-btn" onclick="onMenuSelection('saved-meme-gallery')">Saved Memes</button>
+        </div>
     </header>
-    <section class="gallery">
-        <div class="gallery-container">
-            <div class="gallery-grid">
-            </div>
+
+    <section class="main-section gallery-container">
+        <div class="gallery-grid">
         </div>
     </section>
-    <div class="generator-panel">
+
+    <section class="main-section generator-panel">
         <div class="canvas-container">
             <canvas id="my-canvas" height="300" width="300"></canvas>
         </div>
         <menu class="button-menu">
             <div class="menu-line line-input">
-                <input type="text" name="text-box" placeholder="Type text here"
-                    onfocus="this.placeholder = ''">
+                <input type="text" name="text-box" placeholder="Type text here" onfocus="this.placeholder = ''">
             </div>
             <div class="text-editor">
                 <div class="menu-line line-constructor">
@@ -76,13 +81,20 @@
                 <input class='font-color' type="color" name="font-color">
                 <input type="color" name="stroke-color">
             </div>
+            <div class="menu-line save-and-share">
+                <button class="save-btn" onclick="onSaveMeme()">save</button>
+            </div>
         </menu>
-    </div>
+    </section>
+    <section class="main-section saved-meme-gallery">
+
+    </section>
 
     <script src="js/services/meme-utils-service.js"></script>
     <script src="js/services/meme-storage-service.js"></script>
     <script src="js/services/meme-gallery-service.js"></script>
     <script src="js/services/meme-service.js"></script>
+    <script src="js/saved-memes-service.js"></script>
     <script src="js/gallery-controller.js"></script>
     <script src="js/d&d-controller.js"></script>
     <script src="js/meme-controller.js"></script>
