@@ -2,7 +2,7 @@
     display: none;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(156, 156, 156);
+    background-color: var(--panel);
     padding: 1em;
     border-radius: 15px;
     position: absolute;
@@ -22,7 +22,7 @@ canvas {
 }
 
 .text-editor {
- background-color: rgb(77, 77, 77);
+ background-color: var(--bgc);
  padding: .3em;
  border-radius: 10px;
 }

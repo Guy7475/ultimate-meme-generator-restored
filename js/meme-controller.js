@@ -7,6 +7,7 @@ function onInit() {
     gCanvas = document.querySelector('#my-canvas');
     gCtx = gCanvas.getContext('2d');
     // addEventListeners()
+    renderSavedMemes()
     addMouseListeners();
     addTouchListeners();
     canvasSize();
@@ -71,6 +72,14 @@ function renderMeme() {
     getMeme();
 }
 
+function onMenuSelection(val) {
+    let element = Array.from(document.querySelectorAll(`.main-section`))
+    element.forEach(item=> {
+        item.style.display = 'none'
+    })
+    document.querySelector(`.${val}`).style.display = 'block'
+}
+
 
 // TODO - compress down to one funtion with swith case on service
 function onSwitchLine() {
@@ -106,6 +115,11 @@ function onTextAlign(val) {
 function onFontSelection(font) {
     setFont(font);
     renderMeme();
+}
+
+function onSaveMeme(){
+    SaveMemeToStorage()
+    renderSavedMemes()
 }
 
 function canvasSize() {

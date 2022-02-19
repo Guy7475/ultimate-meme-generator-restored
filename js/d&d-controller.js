@@ -4,6 +4,7 @@ const gTouchEvs = ['touchstart', 'touchmove', 'touchend']
 
 
 function onDown(ev) {
+    if (gMeme.lines.length < 1) return
     const pos = getEvPos(ev);
     if (!isLineHover(pos)) return
 
@@ -15,12 +16,14 @@ function onDown(ev) {
 
 function onMove(ev) {
     const pos = getEvPos(ev);
+    if (gMeme.lines.length < 1) return
     if (!currLine.isDrag) return
     currLine.pos = { x: pos.x, y: pos.y }
     getMeme()
 }
 
 function onUp() {
+    if (gMeme.lines.length < 1) return
     currLine.isDrag = false
 }
 

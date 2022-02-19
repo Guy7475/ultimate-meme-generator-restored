@@ -9,7 +9,6 @@ h1 {
 }
 
 body {
-    background-color: rgb(48, 48, 48); /* For browsers that do not support gradients */
-    
+    background-color: var(--bgc);
     margin: 0;
 }

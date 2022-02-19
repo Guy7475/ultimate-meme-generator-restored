@@ -1,45 +1,27 @@
 'use strict';
-var gCanvWidth;
-var gCanvheight;
+
+
+// var gCanvWidth;
+// var gCanvheight;
 
 var gMeme = {
     selectedImgId: 2,
     selectedLineIdx: 0,
     lines: [
-        {
-            pos: { x: 150, y: 50 },
-            dimen: { width: 0, height: 0 },
-            // cor: { tl: { x: 0, y: 0 }, tr: { x: 0, y: 0 }, bl: { x: 0, y: 0 }, br: { x: 0, y: 0 } },
-            txt: 'line 1',
-            size: 30,
-            align: 'center',
-            fontColor: 'white',
-            StrokeColor: 'black',
-            font: 'Impact',
-            isDrag: false,
-        },
-        {
-            pos: { x: 150, y: 275 },
-            dimen: { width: 0, height: 0 },
-            // cor: { tl: { x: 0, y: 0 }, tr: { x: 0, y: 0 }, bl: { x: 0, y: 0 }, br: { x: 0, y: 0 } },
-            txt: 'line 2',
-            size: 30,
-            align: 'center',
-            fontColor: 'white',
-            StrokeColor: 'black',
-            font: 'Impact',
-            isDrag: false,
-        },
     ]
 };
 
-var currLine = gMeme.lines[gMeme.selectedLineIdx];
+var currLine //= gMeme.lines[gMeme.selectedLineIdx];
 
 function createLine() {
+    let yPos;
+    if (gMeme.lines.length < 1) yPos = 50;
+    else if (gMeme.lines.length === 1) yPos = 275;
+    else yPos = 200;
+
     const newLine = {
-        pos: { x: 150, y: 200 },
+        pos: { x: 150, y: yPos },
         dimen: { width: 0, height: 0 },
-        // cor: { tl: { x: 0, y: 0 }, tr: { x: 0, y: 0 }, bl: { x: 0, y: 0 }, br: { x: 0, y: 0 } },
         txt: 'middle line',
         size: 30,
         align: 'center',
@@ -74,14 +56,13 @@ function drawText(line) {
     gCtx.fillText(line.txt, line.pos.x, line.pos.y);
     gCtx.strokeText(line.txt, line.pos.x, line.pos.y);
     setLineDimen(line);
-    setLineCor(line);
 }
 
 function drawFocusBox() {
     if (!currLine) return;
     gCtx.beginPath();
     gCtx.rect(
-        currLine.pos.x - currLine.dimen.width*.75 ,
+        currLine.pos.x - currLine.dimen.width * .75,
         currLine.pos.y - currLine.dimen.height,
         currLine.dimen.width * 1.5,
         currLine.dimen.height * 1.5,
@@ -98,23 +79,6 @@ function setLineDimen(line) {
     line.dimen.width = textMetrics.width;
     line.dimen.height = textMetrics.fontBoundingBoxAscent + textMetrics.fontBoundingBoxDescent;
 }
-//
-function setLineCor(line) {
-    // let x = line.pos.x;
-    // let y = line.pos.y;
-
-    // line.cor.tl.x = x/2;
-    // line.cor.tl.y = y/2;
-
-    // line.cor.tr.x = x + (line.dimen.width/2);
-    // line.cor.tr.y = y/2;
-
-    // line.cor.bl.x = x/2
-    // line.cor.bl.y = y + (line.dimen.height/2);
-
-    // line.cor.br.x = (x/2) + (line.dimen.width);
-    // line.cor.br.y = (y/2) + (line.dimen.height);
-}
 
 function setLineYcor(val) {
     currLine.pos.y += val * 3;
@@ -127,7 +91,7 @@ function setCurrLine() {
         gMeme.selectedLineIdx = 0;
     }
     currLine = gMeme.lines[gMeme.selectedLineIdx];
-    getMeme()
+    getMeme();
 }
 
 function setImg(imgId) {
@@ -140,34 +104,37 @@ function deleteCurrLine() {
 }
 
 function setLineTxt(text) {
+    if (gMeme.lines.length < 1) return
     currLine.txt = text;
 }
 
 function setLineSize(val) {
+    if (gMeme.lines.length < 1) return
     currLine.size += val;
     console.log(currLine);
 }
 
 function setTextDirec(val) {
+    if (gMeme.lines.length < 1) return
     currLine.align = val;
 }
 
 function setFontColor(color) {
+    if (gMeme.lines.length < 1) return
     currLine.fontColor = color;
 }
 
 function setStrokeColor(color) {
+    if (gMeme.lines.length < 1) return
     currLine.StrokeColor = color;
 }
 
 function setFont(font) {
+    if (gMeme.lines.length < 1) return
     currLine.font = font;
 }
 
 function setCanvsSize(canvSize) {
-    gCanvWidth = canvSize.width;
-    gCanvheight = canvSize.height;
+    // gCanvWidth = canvSize.width;
+    // gCanvheight = canvSize.height;
 }
-
-
-
