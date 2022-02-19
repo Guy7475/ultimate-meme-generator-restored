@@ -84,13 +84,17 @@ button img {
 }
 
 .save-btn {
-    color: #ef42ff;
-}
-
-.download-btn, a {
     color: #00ffff;
 }
 
+.download-btn, a {
+    color: #ef42ff;
+}
+
+.font-selector {
+    border: 1px solid var(--bgc);
+    border-radius: 10px;
+}
 
 
 
