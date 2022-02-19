@@ -1,16 +1,11 @@
 @media (min-width: 800px) {
-    .gallery-container {
-        max-width: 980px;
-        padding: 1.5em;
-        margin: auto;
-    }
-
     .generator-panel {
         flex-direction: row;
         justify-content: center;
         position: absolute;
         
         top: 25vh;
-        left: 20%;        
+        left: 20%;
+        
     }
 }

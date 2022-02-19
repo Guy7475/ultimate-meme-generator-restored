@@ -67,12 +67,9 @@ function listenToStrokeColor() {
     }, false);
 }
 
-<<<<<<< HEAD
 function renderMeme() {
     getMeme();
 }
-=======
->>>>>>> 106cac6bd106da41aa10dec783507668051a11da
 
 
 // TODO - compress down to one funtion with swith case on service
@@ -124,8 +121,4 @@ function resizeCanvas() {
     gCanvas.height = document.querySelector('.canvas-container').offsetHeight;
     gCanvas.width = document.body.offsetWidth;
     //TODO restore canvas after resizing
-<<<<<<< HEAD
 }
-=======
-  }
->>>>>>> 106cac6bd106da41aa10dec783507668051a11da
