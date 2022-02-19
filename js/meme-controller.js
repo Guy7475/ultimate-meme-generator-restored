@@ -17,7 +17,7 @@ function onInit() {
 }
 
 
-// listeners
+// listeners:
 function addListeners() {
     listenToText();
     listenToFontColor();
