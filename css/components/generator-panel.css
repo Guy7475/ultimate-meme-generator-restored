@@ -1,0 +1,47 @@
+.generator-panel {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(156, 156, 156);
+    padding: 1em;
+    border-radius: 15px;
+    position: absolute;
+        
+    /* top: 25vh; */
+    left: 20%;
+    
+}
+
+.canvas-container {
+    margin: 0;
+}
+
+canvas {
+    margin: 0;
+    border-radius: 5%;
+}
+
+.text-editor {
+ background-color: rgb(77, 77, 77);
+ padding: .3em;
+ border-radius: 10px;
+}
+
+.button-menu {
+    margin: 0;
+    padding: 1em;
+    text-align: center;
+}
+
+.menu-line {
+    padding: .5em ;
+}
+
+button img{
+    width: 1em;
+    height: 1em;
+}
+
+.font-color {
+    background-image: url(../../icons/paint-board-and-brush.png);
+}

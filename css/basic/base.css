@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: press-start;
+    color: rgb(255, 255, 255);
+    font-size: 1.25em;
+}
+
+body {
+    background-color: rgb(48, 48, 48); /* For browsers that do not support gradients */
+    
+    margin: 0;
+}

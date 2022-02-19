@@ -1,0 +1,6 @@
+header {
+    background-image: linear-gradient(to right, rgb(0, 192, 42), rgb(0, 119, 255));
+    padding: .3em;
+    text-align: center;
+    margin-bottom: 2em;
+}
