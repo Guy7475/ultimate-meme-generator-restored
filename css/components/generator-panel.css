@@ -42,7 +42,7 @@ canvas {
 }
 
 .text-editor {
-    background-image: linear-gradient(to right,rgb(255, 0, 0), rgb(255, 166, 0));
+    background-image: linear-gradient(to right,#00ffff, #ef42ff);
     margin: .5em;
     padding: .3em;
     border: 2px solid var(--bgc);
@@ -80,14 +80,15 @@ button img {
     height: 2em;
     border: 2px solid;
     border-radius: 25px;
+    padding: 0 1em;
 }
 
 .save-btn {
-    color: rgb(239, 66, 255);
+    color: #ef42ff;
 }
 
 .download-btn, a {
-    color: aqua;
+    color: #00ffff;
 }
 
 
