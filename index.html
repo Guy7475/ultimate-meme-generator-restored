@@ -38,55 +38,57 @@
         <div class="canvas-container">
             <canvas id="my-canvas" height="300" width="300"></canvas>
         </div>
-        <menu class="button-menu">
-            <div class="menu-line line-input">
-                <input class="text-input" type="text" name="text-box" placeholder="Type text here" onfocus="this.placeholder = ''">
-            </div>
-            <div class="text-editor">
-                <div class="menu-line line-constructor">
-                    <button class="line-up" onclick="onChangingYcor(-1)">
-                        <i class="fa-solid fa-angle-up"></i>
-                    </button>
-                    <button class="line-down" onclick="onChangingYcor(1)">
-                        <i class="fa-solid fa-angle-down"></i>
-                    </button>
-                    <button onclick="onSwitchLine()">
-                        <img src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
-                    </button>
-                    <button class="add-new-line" onclick="onAddLine()">
-                        <i class="fa-solid fa-plus"></i>
-                    </button>
-                    <button class="delet-line" onclick="onDeleteLine()">
-                        <i class="fa-solid fa-recycle"></i>
-                    </button>
+        <div class="menu-container">
+            <menu class="button-menu">
+                <div class="menu-line line-input">
+                    <input class="text-input" type="text" name="text-box" placeholder="Type text here" onfocus="this.placeholder = ''">
                 </div>
-                <div class="menu-line line-size-align">
-                    <button onclick="onResizeLine(-1)">A-</button>
-                    <button onclick="onResizeLine(1)">A+</button>
-                    <button onclick="onTextAlign('right')">
-                        <img src="icons/align-to-left.png" alt="">
-                    </button>
-                    <button onclick="onTextAlign('center')">
-                        <img src="icons/center-text-alignment.png" alt="">
-                    </button>
-                    <button onclick="onTextAlign('left')">
-                        <img src="icons/align-to-right.png" alt="">
-                    </button>
+                <div class="text-editor">
+                    <div class="menu-line line-constructor">
+                        <button class="line-up" onclick="onChangingYcor(-1)">
+                            <i class="fa-solid fa-angle-up"></i>
+                        </button>
+                        <button class="line-down" onclick="onChangingYcor(1)">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </button>
+                        <button onclick="onSwitchLine()">
+                            <img src="icons/up-and-down-opposite-double-arrows-side-by-side.png" alt="">
+                        </button>
+                        <button class="add-new-line" onclick="onAddLine()">
+                            <i class="fa-solid fa-plus"></i>
+                        </button>
+                        <button class="delet-line" onclick="onDeleteLine()">
+                            <i class="fa-solid fa-recycle"></i>
+                        </button>
+                    </div>
+                    <div class="menu-line line-size-align">
+                        <button onclick="onResizeLine(-1)">A-</button>
+                        <button onclick="onResizeLine(1)">A+</button>
+                        <button onclick="onTextAlign('right')">
+                            <img src="icons/align-to-left.png" alt="">
+                        </button>
+                        <button onclick="onTextAlign('center')">
+                            <img src="icons/center-text-alignment.png" alt="">
+                        </button>
+                        <button onclick="onTextAlign('left')">
+                            <img src="icons/align-to-right.png" alt="">
+                        </button>
+                    </div>
                 </div>
-            </div>
-            <div class="menu-line font-and-color">
-                <select name="fonts" id="" onchange="onFontSelection(this.value)">
-                    <option value="Impact">Impact</option>
-                    <option value="balsamiq">Balsamiq</option>
-                    <option value="press-start">press-start</option>
-                </select>
-                <input class='font-color' type="color" name="font-color">
-                <input type="color" name="stroke-color">
-            </div>
-            <div class="menu-line save-and-share">
-                <button class="save-btn" onclick="onSaveMeme()">save</button>
-            </div>
-        </menu>
+                <div class="menu-line font-and-color">
+                    <select name="fonts" id="" onchange="onFontSelection(this.value)">
+                        <option value="Impact">Impact</option>
+                        <option value="balsamiq">Balsamiq</option>
+                        <option value="press-start">press-start</option>
+                    </select>
+                    <input class='font-color' type="color" name="font-color">
+                    <input type="color" name="stroke-color">
+                </div>
+                <div class="menu-line save-and-share">
+                    <button class="save-btn" onclick="onSaveMeme()">save</button>
+                </div>
+            </menu>
+        </div>
     </section>
     <section class="main-section saved-meme-gallery">
         <div class="saved-meme-grid">

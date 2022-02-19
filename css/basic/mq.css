@@ -2,15 +2,21 @@
     .generator-panel {
         flex-direction: row;
         justify-content: center;
-        position: absolute;
+        /* position: absolute; */
         width: 70vw;
         min-width: 700px;
         height: 60vh;
-        margin: 10vh 15vw;
+        margin: 10vh auto;
     }
 
     .button-menu {
         height: 300px;
     }
 
+}
+
+@media (min-width: 450px) {
+    h1 {
+        font-size: 1.25em;
+    }
 }

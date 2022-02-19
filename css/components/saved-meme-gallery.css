@@ -1,5 +1,7 @@
 .saved-meme-gallery {
  display: none;
+ width: 90vw;
+ margin: auto;
 }
 
 .saved-meme-grid {
@@ -12,4 +14,6 @@
     height: 150px;
     cursor: pointer;
     border-radius: 5%;
+    border: 2px solid var(--panel);
+
 }
