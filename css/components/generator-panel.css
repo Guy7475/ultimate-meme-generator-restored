@@ -42,10 +42,11 @@ canvas {
 }
 
 .text-editor {
-    background-image: linear-gradient(to right,rgb(255, 0, 0), rgb(255, 238, 0));
+    background-image: linear-gradient(to right,rgb(255, 0, 0), rgb(255, 166, 0));
+    margin: .5em;
     padding: .3em;
     border: 2px solid var(--bgc);
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 .text-input {
@@ -73,5 +74,22 @@ button img {
     width: 1em;
     height: 1em;
 }
+
+.save-btn, .download-btn {
+    background-color: #494949f8;
+    height: 2em;
+    border: 2px solid;
+    border-radius: 25px;
+}
+
+.save-btn {
+    color: rgb(239, 66, 255);
+}
+
+.download-btn, a {
+    color: aqua;
+}
+
+
 
 

@@ -50,10 +50,8 @@ function listenToFontColor() {
     let elColorPicker = document.querySelector("input[name=font-color]");
     elColorPicker.addEventListener("input", function () {
         let color = elColorPicker.value;
-
         setFontColor(color);
         renderMeme();
-
     }, false);
 }
 
@@ -63,7 +61,6 @@ function listenToStrokeColor() {
         let color = elColorPicker.value;
         setStrokeColor(color);
         renderMeme();
-
     }, false);
 }
 

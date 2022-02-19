@@ -24,7 +24,7 @@
             <nav class="main-nav">
                 <div class="menu-btn" onclick="onMenuSelection('gallery-container')">Change Image</div>
                 <div class="menu-btn" onclick="onMenuSelection('generator-panel')">Generator</div>
-                <div class="menu-btn" onclick="onMenuSelection('saved-meme-gallery')">Saved Memes</div>
+                <div class="menu-btn" onclick="onMenuSelection('saved-meme-gallery')">Saved Meme Gallery</div>
             </nav>
         </div>
     </header>
@@ -33,7 +33,7 @@
         <div class="gallery-grid">
         </div>
     </section>
-    
+
     <section class="main-section generator-panel">
         <div class="canvas-container">
             <canvas id="my-canvas" height="300" width="300"></canvas>
@@ -41,7 +41,8 @@
         <div class="menu-container">
             <menu class="button-menu">
                 <div class="menu-line line-input">
-                    <input class="text-input" type="text" name="text-box" placeholder="Type text here" onfocus="this.placeholder = ''">
+                    <input class="text-input" type="text" name="text-box" placeholder="Type text here"
+                        onfocus="this.placeholder = ''">
                 </div>
                 <div class="text-editor">
                     <div class="menu-line line-constructor">
@@ -74,18 +75,24 @@
                             <img src="icons/align-to-right.png" alt="">
                         </button>
                     </div>
-                </div>
-                <div class="menu-line font-and-color">
-                    <select name="fonts" id="" onchange="onFontSelection(this.value)">
-                        <option value="Impact">Impact</option>
-                        <option value="balsamiq">Balsamiq</option>
-                        <option value="press-start">press-start</option>
-                    </select>
-                    <input class='font-color' type="color" name="font-color">
-                    <input type="color" name="stroke-color">
+
+                    <div class="menu-line font-and-color">
+                        <select name="fonts" id="" onchange="onFontSelection(this.value)">
+                            <option value="Impact">Impact</option>
+                            <option value="balsamiq">Balsamiq</option>
+                            <option value="press-start">press-start</option>
+                        </select>
+                        <input class='font-color' type="color" name="font-color">
+                        <input type="color" name="stroke-color">
+                    </div>
                 </div>
                 <div class="menu-line save-and-share">
-                    <button class="save-btn" onclick="onSaveMeme()">save</button>
+                    <button class="save-btn" onclick="onSaveMeme()">Add To Gallery</button>
+                    <button class="download-btn">
+                        <a href="" onclick="ondownloadMeme(this)">
+                            Download
+                        </a>
+                    </button>
                 </div>
             </menu>
         </div>

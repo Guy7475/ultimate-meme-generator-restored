@@ -20,10 +20,12 @@ function SaveMemeToStorage() {
             gMemeGallery.unshift(meme)
             saveToStorage(STORAGE_KEY, gMemeGallery)
             renderSavedMemes()
+            alert('Your artwork added to "Saved Memes"')
         });
     };
     let num = gImgs[gMeme.selectedImgId].id;
     img.src = `./img/meme-imgs (square)/${num}.jpg`;
+
 }
 
 function onOpenSavedMemes() {
@@ -38,10 +40,21 @@ function renderSavedMemes() {
     let memes = getMemesForDisplay();
     let strHTML = memes.map(meme => {
         return `
-        <img class="saved-gallery-item" src="${meme}">
+        <img class="saved-gallery-item" src="${meme}"  onclick="onClickedsavedMeme('${meme}')">
         `;
     });
     let elMemeGallery = document.querySelector('.saved-meme-grid')
     elMemeGallery.innerHTML = strHTML.join('')
 }
 
+// TODO - click on saved to open
+function onClickedsavedMeme(imgURL) {
+    // getMeme(imgURL);
+}
+
+function ondownloadMeme(elLink) {
+    const data = gCanvas.toDataURL()
+    console.log(data);
+    elLink.href = data
+    elLink.download = 'my-meme.jpg'
+}
