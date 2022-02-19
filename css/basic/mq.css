@@ -1,5 +1,7 @@
 @media (min-width: 800px) {
-
+    .menu-container {
+        max-width: 400px;
+    }
     
     .generator-panel {
         flex-direction: row;
