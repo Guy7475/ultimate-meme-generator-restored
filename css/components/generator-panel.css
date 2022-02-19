@@ -23,6 +23,7 @@ canvas {
 }
 
 .button-menu {
+    background-color: #4949498f;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -41,6 +42,11 @@ canvas {
     width: 100%;
     border-radius: 15px;
     border: 3px solid var(--bgc);
+}
+
+.font-and-color {
+    display: flex;
+    justify-content: space-between;
 }
 
 .button-menu {

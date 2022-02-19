@@ -1,4 +1,6 @@
 .gallery-grid {
+    width: 85vw;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: .5em;
@@ -9,4 +11,5 @@
     height: 150px;
     cursor: pointer;
     border-radius: 5%;
+    border: 2px solid var(--panel);
 }
