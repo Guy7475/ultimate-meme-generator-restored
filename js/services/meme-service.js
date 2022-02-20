@@ -138,6 +138,7 @@ function setFont(font) {
 
 function setGalleryBySearch(txt) {
     gFilteredImgs = [];
+    txt = txt.toLowerCase()
     gFilteredImgs = gImgs.filter(img => {
         var isIncludes = false;
         img.keywords.forEach(keyword => {
