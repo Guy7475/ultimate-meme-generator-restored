@@ -4,6 +4,7 @@
     }
     
     .generator-panel {
+        background-color: #494949f8;
         flex-direction: row;
         justify-content: center;
         width: 70vw;

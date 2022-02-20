@@ -3,11 +3,10 @@
 var gMeme = {
     selectedImgId: 2,
     selectedLineIdx: 0,
-    lines: [
-    ]
+    lines: [],
 };
 
-var currLine //= gMeme.lines[gMeme.selectedLineIdx];
+var currLine; //= gMeme.lines[gMeme.selectedLineIdx];
 
 function createLine() {
     let yPos;
@@ -66,6 +65,7 @@ function drawFocusBox() {
     gCtx.fillStyle = 'orange';
     gCtx.strokeStyle = 'black';
     gCtx.stroke();
+    gCtx.closePath();
 
 }
 
@@ -99,34 +99,33 @@ function deleteCurrLine() {
 }
 
 function setLineTxt(text) {
-    if (gMeme.lines.length < 1) return
+    if (gMeme.lines.length < 1) return;
     currLine.txt = text;
 }
 
 function setLineSize(val) {
-    if (gMeme.lines.length < 1) return
+    if (gMeme.lines.length < 1) return;
     currLine.size += val;
 }
 
 function setTextDirec(val) {
-    if (gMeme.lines.length < 1) return
+    if (gMeme.lines.length < 1) return;
     currLine.align = val;
 }
 
 function setFontColor(color) {
-    if (gMeme.lines.length < 1) return
+    if (gMeme.lines.length < 1) return;
     currLine.fontColor = color;
 }
 
 function setStrokeColor(color) {
-    if (gMeme.lines.length < 1) return
+    if (gMeme.lines.length < 1) return;
     currLine.StrokeColor = color;
-    console.log('gCtx.strokeStyle:', gCtx.strokeStyle)
-
+    // console.log('gCtx.strokeStyle:', gCtx.strokeStyle);
 }
 
 function setFont(font) {
-    if (gMeme.lines.length < 1) return
+    if (gMeme.lines.length < 1) return;
     currLine.font = font;
 }
 

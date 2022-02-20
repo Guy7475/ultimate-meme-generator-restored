@@ -7,9 +7,8 @@ function onInit() {
     gCanvas = document.querySelector('#my-canvas');
     gCtx = gCanvas.getContext('2d');
     // addEventListeners()
-    renderSavedMemes()
-    addMouseListeners();
-    addTouchListeners();
+    renderSavedMemes();
+
     canvasSize();
     renderGallery();
     addListeners();
@@ -18,6 +17,8 @@ function onInit() {
 
 // listeners:
 function addListeners() {
+    addMouseListeners();
+    addTouchListeners();
     listenToText();
     listenToFontColor();
     listenToStrokeColor();
@@ -69,14 +70,14 @@ function renderMeme() {
 }
 
 function onMenuSelection(val) {
-    let element = Array.from(document.querySelectorAll(`.main-section`))
-    element.forEach(item=> {
-        item.style.display = 'none'
-    })
+    let element = Array.from(document.querySelectorAll(`.main-section`));
+    element.forEach(item => {
+        item.style.display = 'none';
+    });
     if (val === 'generator-panel') {
-        document.querySelector(`.${val}`).style.display = 'flex'
+        document.querySelector(`.${val}`).style.display = 'flex';
     }
-    else document.querySelector(`.${val}`).style.display = 'block'
+    else document.querySelector(`.${val}`).style.display = 'block';
 }
 
 
@@ -116,9 +117,9 @@ function onFontSelection(font) {
     renderMeme();
 }
 
-function onSaveMeme(){
-    SaveMemeToStorage()
-    renderSavedMemes()
+function onSaveMeme() {
+    SaveMemeToStorage();
+    renderSavedMemes();
 }
 
 function canvasSize() {

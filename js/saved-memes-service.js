@@ -54,7 +54,7 @@ function onClickedsavedMeme(imgURL) {
 
 function ondownloadMeme(elLink) {
     const data = gCanvas.toDataURL()
-    console.log(data);
+    // console.log(data);
     elLink.href = data
     elLink.download = 'my-meme.jpg'
 }
