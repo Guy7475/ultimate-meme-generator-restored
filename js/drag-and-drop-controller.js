@@ -7,10 +7,7 @@ function onDown(ev) {
     if (gMeme.lines.length < 1) return
     const pos = getEvPos(ev);
     if (!isLineHover(pos)) return
-
-    console.log('onDown()');
     currLine.isDrag = true;
-    // gMeme.selectedLineIdx = gMeme.
     getMeme()
 }
 

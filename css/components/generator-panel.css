@@ -24,6 +24,7 @@ canvas {
 
 .menu-container{
     background-color: #494949f8;
+    background-image: linear-gradient(to right,#00ad96, #00aeb4);
     width: 100%;
     display: flex;
     justify-content: center;
@@ -44,11 +45,17 @@ canvas {
 }
 
 .text-editor {
-    background-image: linear-gradient(to right,#00ad96, #00aeb4);
+    
+    background-color: #494949f8;
+
     margin: .5em;
     padding: .3em;
     border: 2px solid var(--bgc);
-    border-radius: 25px;
+    border-radius: 15px;
+}
+
+button, [type='color'], .save-btn, .download-btn:hover {
+    cursor: pointer;
 }
 
 .text-input {
@@ -77,7 +84,7 @@ button img {
 .save-btn, .download-btn {
     background-color: #494949f8;
     height: 2em;
-    border: 2px solid;
+    border: 1px solid #494949f8;
     border-radius: 25px;
     padding: 0 1em;
 }
@@ -94,7 +101,11 @@ button img {
 
 .font-selector {
     border: 1px solid var(--bgc);
-    border-radius: 10px;
+    border-radius: 7px;
+}
+
+[type='color'] {
+    width: 2.25em;
 }
 
 

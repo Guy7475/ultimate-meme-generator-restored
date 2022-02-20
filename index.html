@@ -22,9 +22,9 @@
         </div>
         <div class="secondary-bar">
             <nav class="main-nav">
-                <div class="menu-btn" onclick="onMenuSelection('gallery-container')">Change Image</div>
+                <div class="menu-btn" onclick="onMenuSelection('gallery-container')">Gallery</div>
                 <div class="menu-btn" onclick="onMenuSelection('generator-panel')">Generator</div>
-                <div class="menu-btn" onclick="onMenuSelection('saved-meme-gallery')">Saved Meme Gallery</div>
+                <div class="menu-btn" onclick="onMenuSelection('saved-meme-gallery')">Saved Memes</div>
             </nav>
         </div>
     </header>
@@ -42,7 +42,7 @@
             <menu class="button-menu">
                 <div class="menu-line line-input">
                     <input class="text-input" type="text" name="text-box" placeholder="Type text here"
-                        onfocus="this.placeholder = ''">
+                        onclick="this.select()" >
                 </div>
                 <div class="text-editor">
                     <div class="menu-line line-constructor">
@@ -110,7 +110,7 @@
     <script src="js/services/meme-service.js"></script>
     <script src="js/saved-memes-service.js"></script>
     <script src="js/gallery-controller.js"></script>
-    <script src="js/d&d-controller.js"></script>
+    <script src="js/drag-and-drop-controller.js"></script>
     <script src="js/meme-controller.js"></script>
 
 </body>

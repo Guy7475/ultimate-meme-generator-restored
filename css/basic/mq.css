@@ -1,14 +1,21 @@
+@media (min-width: 500px) {
+    h1 {
+        font-size: 1.25em;
+    }
+}
+
 @media (min-width: 800px) {
     .menu-container {
         max-width: 400px;
     }
     
     .generator-panel {
-        background-color: #494949f8;
+        background-color: #494949be;
         flex-direction: row;
         justify-content: center;
-        width: 70vw;
-        min-width: 700px;
+        width: 850px;
+        /* width: 70vw;
+        min-width: 700px; */
         height: 60vh;
         margin: 10vh auto;
     }
@@ -23,8 +30,4 @@
 
 }
 
-@media (min-width: 450px) {
-    h1 {
-        font-size: 1.25em;
-    }
-}
+

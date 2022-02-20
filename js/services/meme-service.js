@@ -62,10 +62,13 @@ function drawFocusBox() {
         currLine.dimen.width * 1.5,
         currLine.dimen.height * 1.5,
     );
+    gCtx.save();
     gCtx.fillStyle = 'orange';
-    gCtx.strokeStyle = 'black';
+    gCtx.strokeStyle = 'rgb(123, 255, 0)';
+    gCtx.lineWidth = 2;
     gCtx.stroke();
-    gCtx.closePath();
+    // gCtx.closePath();
+    gCtx.restore();
 
 }
 
@@ -120,8 +123,8 @@ function setFontColor(color) {
 
 function setStrokeColor(color) {
     if (gMeme.lines.length < 1) return;
-    currLine.StrokeColor = color;
-    // console.log('gCtx.strokeStyle:', gCtx.strokeStyle);
+    currLine.strokeColor = color;
+    console.log('gCtx.strokeStyle:', gCtx.strokeStyle);
 }
 
 function setFont(font) {
