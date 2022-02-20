@@ -1,3 +1,21 @@
 .search-bar {
     background-color: #fff;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+.button-container {
+    max-width: 980px;
+    
+}
+
+.search-bar input[type='text'] {
+    height: 1.5em;
+}
+
+.search-bar button {
+    height: 1.5em;
+}
+

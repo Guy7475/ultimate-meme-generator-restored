@@ -1,18 +1,12 @@
 'use strict';
 
-var gFilteredImgs = []
-// var gImgs = []
-// for (let index = 1; index < 18; index++) {
-//     const img = { id: index, url: `./img/meme-imgs (square)/${index}.jpg`, keywords: [] }
-//     gImgs.push(img)
-// }
-
-const gKeywordsMap 
+var gFilteredImgs = [];
+var gKeywordsMap 
 
 
 var gImgs = [
     { id: 1, url: './img/meme-imgs (square)/1.jpg', keywords: ['trump', 'politics'] },
-    { id: 2, url: './img/meme-imgs (square)/2.jpg', keywords: ['puppy', 'cute'] },
+    { id: 2, url: './img/meme-imgs (square)/2.jpg', keywords: ['puppy','dog', 'cute'] },
     { id: 3, url: './img/meme-imgs (square)/3.jpg', keywords: ['baby', 'cute', 'puppy'] },
     { id: 4, url: './img/meme-imgs (square)/4.jpg', keywords: ['cat', 'sleep'] },
     { id: 5, url: './img/meme-imgs (square)/5.jpg', keywords: ['baby', 'mad'] },

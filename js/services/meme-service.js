@@ -6,7 +6,7 @@ var gMeme = {
     lines: [],
 };
 
-var gAreLinesInMeme = false
+var gAreLinesInMeme = false;
 
 var currLine; //= gMeme.lines[gMeme.selectedLineIdx];
 
@@ -29,7 +29,7 @@ function createLine() {
     };
     gMeme.lines.push(newLine);
     setCurrLine();
-    gAreLinesInMeme = true
+    gAreLinesInMeme = true;
 }
 
 function getMeme() {
@@ -133,24 +133,25 @@ function setFont(font) {
     currLine.font = font;
 }
 
-function setCanvsSize(canvSize) {
-    // gCanvWidth = canvSize.width;
-    // gCanvheight = canvSize.height;
-}
-
 function setGalleryBySearch(txt) {
-    gFilteredImgs = []
-    gImgs.map(img => {
-        img.keywords.map(keyword => {
+    gFilteredImgs = [];
+    gFilteredImgs = gImgs.filter(img => {
+        var isIncludes = false;
+        img.keywords.forEach(keyword => {
             if (keyword.includes(txt)) {
-                console.log('yay');
-                gFilteredImgs.push(img)
+                isIncludes = true;
             }
-        })
-    })
+        });
+        return isIncludes;
+    });
+    
 }
 
 function getImagesForDisplay() {
-    if (gFilteredImgs.length > 0 ) return gFilteredImgs
-    else return gImgs
+    if (gFilterBy.length > 0) return gFilteredImgs;
+    else return gImgs;
+}
+function setCanvsSize(canvSize) {
+    // gCanvWidth = canvSize.width;
+    // gCanvheight = canvSize.height;
 }

@@ -2,10 +2,12 @@
 
 var gCanvas;
 var gCtx;
+var gFilterBy = ''
 
 function onInit() {
     gCanvas = document.querySelector('#my-canvas');
     gCtx = gCanvas.getContext('2d');
+    renderMeme()
     renderSavedMemes();
     canvasSize();
     renderGallery();
@@ -38,7 +40,7 @@ function listenToSearch() {
     let elText = document.querySelector("input[name=search-box]");
     elText.addEventListener("input", function () {
         let txt = elText.value;
-        console.log(txt);
+        gFilterBy = txt
         setGalleryBySearch(txt);
         renderGallery();
     }, false);

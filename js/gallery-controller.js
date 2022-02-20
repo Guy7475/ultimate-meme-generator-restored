@@ -22,14 +22,14 @@ function onImgSelect(imgId) {
 
 function onImFlexible() {
     gMeme = {
-        selectedImgId: getRandomIntInclusive(1, gImgs.length),
+        selectedImgId: getRandomIntInclusive(1, gImgs.length - 1),
         selectedLineIdx: 0,
         lines: [
             {
                 pos: { x: 150, y: 50 },
                 dimen: { width: 0, height: 0 },
                 txt: gRandMemeLines[getRandomIntInclusive(0, gRandMemeLines.length - 1)],
-                size: getRandomIntInclusive(15, 25),
+                size: getRandomIntInclusive(15, 30),
                 align: 'center',
                 fontColor: getRandomColor(),
                 StrokeColor: getRandomColor(),
@@ -40,7 +40,7 @@ function onImFlexible() {
                 pos: { x: 150, y: 275 },
                 dimen: { width: 0, height: 0 },
                 txt: gRandMemeLines[getRandomIntInclusive(0, gRandMemeLines.length - 1)],
-                size: getRandomIntInclusive(15, 25),
+                size: getRandomIntInclusive(20, 30),
                 align: 'center',
                 fontColor: getRandomColor(),
                 StrokeColor: getRandomColor(),
@@ -51,7 +51,7 @@ function onImFlexible() {
     };
     setCurrLine();
     gAreLinesInMeme = true;
-    onMenuSelection('generator-panel')
+    onMenuSelection('generator-panel');
 }
 
 
