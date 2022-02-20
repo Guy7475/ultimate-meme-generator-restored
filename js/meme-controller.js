@@ -6,13 +6,10 @@ var gCtx;
 function onInit() {
     gCanvas = document.querySelector('#my-canvas');
     gCtx = gCanvas.getContext('2d');
-    // addEventListeners()
     renderSavedMemes();
-
     canvasSize();
     renderGallery();
     addListeners();
-    renderMeme();
 }
 
 // listeners:
