@@ -40,7 +40,9 @@ function renderSavedMemes() {
     let memes = getMemesForDisplay();
     let strHTML = memes.map(meme => {
         return `
+        <a href="" onclick="ondownloadMeme(this)">
         <img class="saved-gallery-item" src="${meme}"  onclick="onClickedsavedMeme('${meme}')">
+        </a>
         `;
     });
     let elMemeGallery = document.querySelector('.saved-meme-grid')
@@ -48,8 +50,9 @@ function renderSavedMemes() {
 }
 
 // TODO - click on saved to open
-function onClickedsavedMeme(imgURL) {
-    // getMeme(imgURL);
+function onClickedsavedMeme(elLink, imgURL) {
+    getMeme(imgURL);
+    ondownloadMeme(elLink)
 }
 
 function ondownloadMeme(elLink) {

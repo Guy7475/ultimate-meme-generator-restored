@@ -32,7 +32,7 @@ function createLine(text) {
     gAreLinesInMeme = true;
 }
 
-function getMeme() {
+function getMeme(imgURL) {
     var img = new Image();
     img.onload = () => {
         gCtx.drawImage(img, 0, 0, gCanvas.width, gCanvas.height);
@@ -41,8 +41,11 @@ function getMeme() {
             drawText(line);
         });
     };
-    let num = gImgs[gMeme.selectedImgId].id;
-    img.src = `./img/meme-imgs (square)/${num}.jpg`;
+    if (imgURL) img.src = imgURL
+    else {
+        let num = gImgs[gMeme.selectedImgId].id;
+        img.src = `./img/meme-imgs (square)/${num}.jpg`; 
+    }
 }
 
 function drawText(line) {
