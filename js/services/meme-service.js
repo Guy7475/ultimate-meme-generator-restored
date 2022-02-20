@@ -6,6 +6,8 @@ var gMeme = {
     lines: [],
 };
 
+var gAreLinesInMeme = false
+
 var currLine; //= gMeme.lines[gMeme.selectedLineIdx];
 
 function createLine() {
@@ -27,6 +29,7 @@ function createLine() {
     };
     gMeme.lines.push(newLine);
     setCurrLine();
+    gAreLinesInMeme = true
 }
 
 function getMeme() {
@@ -67,9 +70,7 @@ function drawFocusBox() {
     gCtx.strokeStyle = 'rgb(123, 255, 0)';
     gCtx.lineWidth = 2;
     gCtx.stroke();
-    // gCtx.closePath();
     gCtx.restore();
-
 }
 
 function setLineDimen(line) {
@@ -102,33 +103,33 @@ function deleteCurrLine() {
 }
 
 function setLineTxt(text) {
-    if (gMeme.lines.length < 1) return;
+    if (!gAreLinesInMeme) return;
     currLine.txt = text;
 }
 
 function setLineSize(val) {
-    if (gMeme.lines.length < 1) return;
+    if (!gAreLinesInMeme) return;
     currLine.size += val;
 }
 
 function setTextDirec(val) {
-    if (gMeme.lines.length < 1) return;
+    if (!gAreLinesInMeme) return;
     currLine.align = val;
 }
 
 function setFontColor(color) {
-    if (gMeme.lines.length < 1) return;
+    if (!gAreLinesInMeme) return;
     currLine.fontColor = color;
 }
 
 function setStrokeColor(color) {
-    if (gMeme.lines.length < 1) return;
+    if (!gAreLinesInMeme) return;
     currLine.strokeColor = color;
     console.log('gCtx.strokeStyle:', gCtx.strokeStyle);
 }
 
 function setFont(font) {
-    if (gMeme.lines.length < 1) return;
+    if (!gAreLinesInMeme) return;
     currLine.font = font;
 }
 
@@ -137,3 +138,19 @@ function setCanvsSize(canvSize) {
     // gCanvheight = canvSize.height;
 }
 
+function setGalleryBySearch(txt) {
+    gFilteredImgs = []
+    gImgs.map(img => {
+        img.keywords.map(keyword => {
+            if (keyword.includes(txt)) {
+                console.log('yay');
+                gFilteredImgs.push(img)
+            }
+        })
+    })
+}
+
+function getImagesForDisplay() {
+    if (gFilteredImgs.length > 0 ) return gFilteredImgs
+    else return gImgs
+}

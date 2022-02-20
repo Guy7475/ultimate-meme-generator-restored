@@ -16,6 +16,7 @@ function onInit() {
 function addListeners() {
     addMouseListeners();
     addTouchListeners();
+    listenToSearch()
     listenToText();
     listenToFontColor();
     listenToStrokeColor();
@@ -33,17 +34,25 @@ function addTouchListeners() {
     gCanvas.addEventListener('touchend', onUp);
 }
 
-function listenToText() {
-    renderMeme();
-    let elText = document.querySelector("input[name=text-box]");
+function listenToSearch() {
+    let elText = document.querySelector("input[name=search-box]");
     elText.addEventListener("input", function () {
         let txt = elText.value;
         console.log(txt);
-        setLineTxt(txt);
-        renderMeme();
-
+        setGalleryBySearch(txt);
+        renderGallery();
     }, false);
 }
+
+function listenToText() {
+    let elText = document.querySelector("input[name=text-box]");
+    elText.addEventListener("input", function () {
+        let txt = elText.value;
+        setLineTxt(txt);
+        renderMeme();
+    }, false);
+}
+
 function listenToFontColor() {
     let elColorPicker = document.querySelector("input[name=font-color]");
     elColorPicker.addEventListener("input", function () {
