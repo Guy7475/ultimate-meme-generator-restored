@@ -2,6 +2,7 @@
     padding-top: 1.5em;
     display: none;
     width: 90vw;
+    max-width: 980px;
     margin: auto;
 }
 

@@ -3,8 +3,8 @@
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: .5em;
-    /* height: 50vh; */
+    gap: 1em;
+    max-width: 980px;
 }
 
 .glry-img {
