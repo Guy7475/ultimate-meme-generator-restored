@@ -10,7 +10,7 @@ var gAreLinesInMeme = false;
 
 var currLine; //= gMeme.lines[gMeme.selectedLineIdx];
 
-function createLine() {
+function createLine(text) {
     let yPos;
     if (gMeme.lines.length < 1) yPos = 50;
     else if (gMeme.lines.length === 1) yPos = 275;
@@ -19,7 +19,7 @@ function createLine() {
     const newLine = {
         pos: { x: 150, y: yPos },
         dimen: { width: 0, height: 0 },
-        txt: 'Edit this text',
+        txt: text,
         size: 25,
         align: 'center',
         fontColor: 'white',

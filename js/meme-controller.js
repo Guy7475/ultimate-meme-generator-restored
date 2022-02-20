@@ -101,7 +101,7 @@ function onChangingYcor(val) {
 }
 
 function onAddLine() {
-    createLine();
+    createLine('Edit this text');
     renderMeme();
 }
 
@@ -123,6 +123,12 @@ function onTextAlign(val) {
 function onFontSelection(font) {
     setFont(font);
     renderMeme();
+}
+
+// TODO - reduce to create line with variables
+function onStickerChosen(sticker) {
+    createLine(sticker);
+    renderMeme()
 }
 
 function onSaveMeme() {

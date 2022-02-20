@@ -1,7 +1,8 @@
 .saved-meme-gallery {
- display: none;
- width: 90vw;
- margin: auto;
+    padding-top: 1.5em;
+    display: none;
+    width: 90vw;
+    margin: auto;
 }
 
 .saved-meme-grid {

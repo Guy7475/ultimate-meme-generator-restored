@@ -31,7 +31,7 @@
 
     <section class="main-section gallery-container">
         <div class="search-bar">
-            <input type="text" name="search-box" placeholder="Type text here" onclick="this.select()">
+            <input type="text" name="search-box" placeholder="Search Meme:" onclick="this.select()">
             <button class="feel-flexible" onclick="onImFlexible()">
                 I'm Flexible
             </button>
@@ -91,6 +91,14 @@
                         </select>
                         <input class='font-color' type="color" name="font-color">
                         <input type="color" name="stroke-color">
+                    </div>
+                    <div class="stickers">
+                        <span onclick="onStickerChosen(this.innerText)">😃</span>
+                        <span onclick="onStickerChosen(this.innerText)">🤑</span>
+                        <span onclick="onStickerChosen(this.innerText)">🥵</span>
+                        <span onclick="onStickerChosen(this.innerText)">😱</span>
+                        <span onclick="onStickerChosen(this.innerText)">👽</span>
+
                     </div>
                 </div>
                 <div class="menu-line save-and-share">
