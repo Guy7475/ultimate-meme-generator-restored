@@ -16,10 +16,11 @@ function onInit() {
 
 // listeners:
 function addListeners() {
+    // window.addEventListener('resize', () => { resizeCanvas(); });
     addMouseListeners();
     addTouchListeners();
     listenToSearch()
-    listenToText();
+    listenToLineText();
     listenToFontColor();
     listenToStrokeColor();
 }
@@ -46,7 +47,7 @@ function listenToSearch() {
     }, false);
 }
 
-function listenToText() {
+function listenToLineText() {
     let elText = document.querySelector("input[name=text-box]");
     elText.addEventListener("input", function () {
         let txt = elText.value;
